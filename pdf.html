@@ -44,7 +44,6 @@
             background-color: #101918;
         }
 
-        /* New class for the background doodle element on Page 1 */
         .pg1-doodle-img {
             position: absolute;
             top: 227px;
@@ -56,14 +55,13 @@
             pointer-events: none;
         }
 
-        /* All three main sections share left: 8% to guarantee perfect vertical alignment */
         .pci-logo {
             position: absolute;
             top: 8%;
             left: 8%; 
             width: 220px; 
             height: auto;
-            z-index: 2; /* Ensures it stays above the background doodle */
+            z-index: 2; 
         }
 
         .center-content {
@@ -75,7 +73,7 @@
             flex-direction: column;
             width: 60%; 
             max-width: 700px;
-            z-index: 2; /* Ensures it stays above the background doodle */
+            z-index: 2; 
         }
 
         .southloft-logo {
@@ -85,7 +83,7 @@
         }
 
         .subtitle {
-            color: #C16E38; /* Burnt orange */
+            color: #C16E38; 
             font-size: 1.25rem;
             font-weight: 700;
             letter-spacing: 2.5px;
@@ -100,7 +98,7 @@
             display: flex;
             flex-direction: column;
             gap: 6px;
-            z-index: 2; /* Ensures it stays above the background doodle */
+            z-index: 2; 
         }
 
         .sales-offer {
@@ -124,7 +122,6 @@
             background-color: #efefef;
         }
 
-        /* Background doodle element for Page 2 */
         .pg2-doodle-img {
             position: absolute;
             bottom: -108px;
@@ -143,7 +140,7 @@
             height: 80%;
             display: flex;
             flex-direction: column;
-            z-index: 2; /* Ensures text stays above the doodle */
+            z-index: 2; 
         }
 
         .southloft-logo-dark {
@@ -237,6 +234,163 @@
             margin-left: 8px;
         }
 
+        /* --- PAGE 3 STYLES --- */
+        .page-3 {
+            background-color: #101918;
+            color: #ffffff;
+        }
+
+        .pg3-doodle-img {
+            position: absolute;
+            top: 220px;
+            left: 0;
+            width: 100%;
+            height: 60%;
+            object-fit: cover;
+            z-index: 1;
+            pointer-events: none;
+            opacity: 0.3;
+        }
+
+        .pg3-header {
+            position: absolute;
+            top: 6%;
+            left: 6%;
+            right: 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 2;
+        }
+
+        .pg3-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .pg3-logo {
+            width: 200px;
+            height: auto;
+        }
+
+        .pg3-content {
+            position: absolute;
+            top: 18%;
+            left: 6%;
+            right: 6%;
+            z-index: 2;
+        }
+
+        /* Page 3 Table */
+        .pg3-table {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pg3-tr {
+            display: flex;
+            border-bottom: 1px solid #A9C2B5;
+            padding: 1.8% 0;
+            align-items: flex-start;
+        }
+
+        .pg3-tr.header {
+            border-bottom: 2px solid #A9C2B5;
+            color: #A9C2B5;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding-bottom: 1%;
+        }
+
+        .pg3-tr:last-child {
+            border-bottom: 1px solid #A9C2B5;
+        }
+
+        .pg3-col-1 { width: 22%; font-weight: 700; }
+        .pg3-col-2 { width: 12%; }
+        .pg3-col-3 { width: 28%; }
+        .pg3-col-4 { width: 24%; }
+        .pg3-col-5 { width: 14%; }
+
+        .sub-text {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 400;
+            margin-top: 4px;
+            color: #A9C2B5; /* Light green subtext for readability */
+        }
+
+        /* Page 3 Bank Details */
+        .pg3-bank-section {
+            display: flex;
+            gap: 15%;
+            margin-top: 3%;
+            font-size: 0.75rem;
+        }
+
+        .bank-block {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .bank-block-title {
+            color: #A9C2B5;
+            font-weight: 700;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+        }
+
+        .b-label {
+            color: #A9C2B5;
+            font-weight: 700;
+            margin-top: 4px;
+        }
+
+        .b-val {
+            color: #ffffff;
+            margin-bottom: 2px;
+        }
+
+        /* Page 3 Footer (Dark theme) */
+        .pg3-footer {
+            position: absolute;
+            bottom: 4%;
+            left: 6%;
+            right: 6%;
+            border-top: 1.5px solid #A9C2B5;
+            padding-top: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            z-index: 2;
+        }
+
+        .pg3-footer-legal {
+            font-size: 0.55rem;
+            color: #ffffff;
+            width: 70%;
+            line-height: 1.4;
+        }
+
+        .pg3-footer-date {
+            font-size: 0.9rem;
+            color: #A9C2B5;
+            font-weight: 700;
+            display: flex;
+            align-items: flex-end;
+            margin-top: 5px;
+        }
+
+        .pg3-date-line {
+            display: inline-block;
+            width: 120px;
+            border-bottom: 1px solid #A9C2B5;
+            margin-left: 8px;
+        }
+
         /* Responsive adjustments */
         @media (max-width: 768px) {
             .pci-logo { width: 150px; }
@@ -245,8 +399,13 @@
             
             .table-label, .table-value { font-size: 0.85rem; }
             .pg2-subtitle { font-size: 0.65rem; }
-            .footer-legal { font-size: 0.45rem; }
-            .footer-date { font-size: 0.75rem; }
+            .footer-legal, .pg3-footer-legal { font-size: 0.45rem; }
+            .footer-date, .pg3-footer-date { font-size: 0.75rem; }
+
+            .pg3-title { font-size: 1.2rem; }
+            .pg3-logo { width: 120px; }
+            .pg3-tr { font-size: 0.7rem; }
+            .pg3-bank-section { font-size: 0.6rem; flex-direction: column; gap: 10px; margin-top: 10px;}
         }
     </style>
 </head>
@@ -337,7 +496,133 @@
                 Date of Issue: <span class="date-line"></span>
             </div>
         </div>
+    </div>
 
+    <div class="page page-3">
+        <img src="Background_doodle.png" alt="" class="pg3-doodle-img">
+        
+        <div class="pg3-header">
+            <div class="pg3-title">60 | 40 PAYMENT PLAN</div>
+            <div style="text-align: right;">
+                <img src="SouthLoft_Logo.png" alt="Southlofts Logo" class="pg3-logo">
+                </div>
+        </div>
+
+        <div class="pg3-content">
+            
+            <div class="pg3-table">
+                <div class="pg3-tr header">
+                    <div class="pg3-col-1">Installment</div>
+                    <div class="pg3-col-2">% of Purchase</div>
+                    <div class="pg3-col-3">Amount (AED)</div>
+                    <div class="pg3-col-4">Payment Date</div>
+                    <div class="pg3-col-5">Milestone</div>
+                </div>
+                <div class="pg3-tr">
+                    <div class="pg3-col-1">Booking Amount + Fees</div>
+                    <div class="pg3-col-2">10%</div>
+                    <div class="pg3-col-3">
+                        64,900
+                        <span class="sub-text">(+ 25,960 DLD Fee)</span>
+                        <span class="sub-text">(+ 5,000 OQOOD Fee)</span>
+                    </div>
+                    <div class="pg3-col-4">On Booking</div>
+                    <div class="pg3-col-5">On Booking</div>
+                </div>
+                <div class="pg3-tr">
+                    <div class="pg3-col-1">First Installment</div>
+                    <div class="pg3-col-2">10%</div>
+                    <div class="pg3-col-3">64,900</div>
+                    <div class="pg3-col-4">1 Month from Booking Date</div>
+                    <div class="pg3-col-5">—</div>
+                </div>
+                <div class="pg3-tr">
+                    <div class="pg3-col-1">Monthly Installments</div>
+                    <div class="pg3-col-2">10%</div>
+                    <div class="pg3-col-3">2,489 / Month</div>
+                    <div class="pg3-col-4">Months 3 - 30</div>
+                    <div class="pg3-col-5">—</div>
+                </div>
+                <div class="pg3-tr">
+                    <div class="pg3-col-1">Balloon Payments</div>
+                    <div class="pg3-col-2">—</div>
+                    <div class="pg3-col-3">
+                        25,000 Each
+                        <span class="sub-text">(27,489 Total in Balloon Months)</span>
+                    </div>
+                    <div class="pg3-col-4">
+                        5 Occurrences
+                        <span class="sub-text">(Months 4, 10, 16, 22, 28)</span>
+                    </div>
+                    <div class="pg3-col-5">—</div>
+                </div>
+                <div class="pg3-tr">
+                    <div class="pg3-col-1">Handover</div>
+                    <div class="pg3-col-2">10%</div>
+                    <div class="pg3-col-3">64,900</div>
+                    <div class="pg3-col-4">On Handover</div>
+                    <div class="pg3-col-5">Completion</div>
+                </div>
+                <div class="pg3-tr">
+                    <div class="pg3-col-1">
+                        Post-Handover
+                        <span class="sub-text">(36 Months)</span>
+                    </div>
+                    <div class="pg3-col-2">40%</div>
+                    <div class="pg3-col-3">7,211 / Month</div>
+                    <div class="pg3-col-4">Months 31 - 66</div>
+                    <div class="pg3-col-5">—</div>
+                </div>
+            </div>
+
+            <div class="pg3-bank-section">
+                <div class="bank-block">
+                    <div class="b-label">Bank</div>
+                    <div class="b-val">United Bank Limited (UBL)</div>
+                    
+                    <div class="b-label">Account Title</div>
+                    <div class="b-val">ESCROW ACCOUNT GATEWAY BY PREMIERCHOICE</div>
+                    
+                    <div class="b-label">Account Number</div>
+                    <div class="b-val">200770307</div>
+                    
+                    <div class="b-label">IBAN</div>
+                    <div class="b-val">AE090470000000200770307</div>
+                    
+                    <div class="b-label">Swift Code</div>
+                    <div class="b-val">UNILAEAD</div>
+                    
+                    <div class="b-label">Branch</div>
+                    <div class="b-val">Deira, Dubai</div>
+                </div>
+                
+                <div class="bank-block">
+                    <div class="bank-block-title">FOR 4% DLD AND ADMIN FEE</div>
+                    
+                    <div class="b-label">Bank</div>
+                    <div class="b-val">Abu Dhabi Commercial Bank</div>
+                    
+                    <div class="b-label">Account Title</div>
+                    <div class="b-val">PCI REAL ESTATE DEVELOPERS LLC</div>
+                    
+                    <div class="b-label">IBAN</div>
+                    <div class="b-val">AE770030010031001994462</div>
+                    
+                    <div class="b-label">Swift Code</div>
+                    <div class="b-val">ADCBAEAA</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="pg3-footer">
+            <div class="pg3-footer-legal">
+                The information in this document is strictly confidential and intended for the addressee only. The payment schedules and unit pricing provided by Southlofts are remains valid for two weeks from the date of delivery and proprietary. Southlofts reserves the right to amend the terms, pricing, and availability without prior notice. This document is for informational purposes and does not create a binding legal obligation until a formal Sales and Purchase Agreement (SPA) is signed by all parties.
+            </div>
+            <div class="pg3-footer-date">
+                Date of Issue: <span class="pg3-date-line"></span>
+            </div>
+        </div>
     </div>
 
 </body>
