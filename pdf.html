@@ -276,7 +276,7 @@
 
         .pg3-content {
             position: absolute;
-            top: 18%;
+            top: 15%; /* Lifted slightly to prevent bottom overlap */
             left: 6%;
             right: 6%;
             z-index: 2;
@@ -292,7 +292,7 @@
         .pg3-tr {
             display: flex;
             border-bottom: 1px solid #A9C2B5;
-            padding: 1.8% 0;
+            padding: 1.3% 0; /* Reduced padding to compress table vertically */
             align-items: flex-start;
         }
 
@@ -319,21 +319,30 @@
             font-size: 0.75rem;
             font-weight: 400;
             margin-top: 4px;
-            color: #A9C2B5; /* Light green subtext for readability */
+            color: #A9C2B5; 
         }
 
         /* Page 3 Bank Details */
         .pg3-bank-section {
             display: flex;
-            gap: 15%;
-            margin-top: 3%;
-            font-size: 0.75rem;
+            margin-top: 2%; /* Reduced margin */
+            font-size: 0.65rem; /* Made text slightly smaller to match image strictly */
+            line-height: 1.3;
         }
 
         .bank-block {
             display: flex;
             flex-direction: column;
-            gap: 2px;
+        }
+
+        /* Exactly 34% width aligns the second block perfectly with pg3-col-3 (22% + 12%) */
+        .bank-block.left {
+            width: 34%; 
+            padding-right: 20px;
+        }
+        
+        .bank-block.right {
+            width: 66%;
         }
 
         .bank-block-title {
@@ -346,15 +355,18 @@
         .b-label {
             color: #A9C2B5;
             font-weight: 700;
-            margin-top: 4px;
+            margin-top: 5px; /* Tighter spacing */
+        }
+
+        .b-label:first-child {
+            margin-top: 0;
         }
 
         .b-val {
             color: #ffffff;
-            margin-bottom: 2px;
         }
 
-        /* Page 3 Footer (Dark theme) */
+        /* Page 3 Footer */
         .pg3-footer {
             position: absolute;
             bottom: 4%;
@@ -406,6 +418,7 @@
             .pg3-logo { width: 120px; }
             .pg3-tr { font-size: 0.7rem; }
             .pg3-bank-section { font-size: 0.6rem; flex-direction: column; gap: 10px; margin-top: 10px;}
+            .bank-block.left, .bank-block.right { width: 100%; padding-right: 0;}
         }
     </style>
 </head>
@@ -413,14 +426,10 @@
 
     <div class="page page-1">
         <img src="Background_doodle.png" alt="" class="pg1-doodle-img">
-
         <img src="PCI_Logo.png" alt="Premier Choice Logo" class="pci-logo">
-
         <div class="center-content">
             <img src="SouthLoft_Logo.png" alt="Southlofts Logo" class="southloft-logo">
-            <div class="subtitle">Elevated Co-Living</div>
         </div>
-
         <div class="bottom-left-content">
             <div class="sales-offer">SALES OFFER</div>
             <div class="details">DD/MM/YYYY</div>
@@ -430,10 +439,8 @@
 
     <div class="page page-2">
         <img src="Page_2_bg_doodle.png" alt="" class="pg2-doodle-img">
-        
         <div class="pg2-left-col">
             <img src="SouthLoft_Logo.png" alt="Southlofts Logo" class="southloft-logo-dark">
-
             <div class="table-container">
                 <div class="table-row">
                     <div class="table-label">Prepared For</div>
@@ -485,9 +492,7 @@
                 </div>
             </div>
         </div>
-
         <img src="Pg_2_Right.png" alt="Floor Plan" class="pg2-right-img">
-
         <div class="pg2-footer">
             <div class="footer-legal">
                 The information in this document is strictly confidential and intended for the addressee only. The payment schedules and unit pricing provided by Southlofts are remains valid for two weeks from the date of delivery and proprietary. Southlofts reserves the right to amend the terms, pricing, and availability without prior notice. This document is for informational purposes and does not create a binding legal obligation until a formal Sales and Purchase Agreement (SPA) is signed by all parties.
@@ -505,11 +510,10 @@
             <div class="pg3-title">60 | 40 PAYMENT PLAN</div>
             <div style="text-align: right;">
                 <img src="SouthLoft_Logo.png" alt="Southlofts Logo" class="pg3-logo">
-                </div>
+            </div>
         </div>
 
         <div class="pg3-content">
-            
             <div class="pg3-table">
                 <div class="pg3-tr header">
                     <div class="pg3-col-1">Installment</div>
@@ -576,7 +580,7 @@
             </div>
 
             <div class="pg3-bank-section">
-                <div class="bank-block">
+                <div class="bank-block left">
                     <div class="b-label">Bank</div>
                     <div class="b-val">United Bank Limited (UBL)</div>
                     
@@ -596,7 +600,7 @@
                     <div class="b-val">Deira, Dubai</div>
                 </div>
                 
-                <div class="bank-block">
+                <div class="bank-block right">
                     <div class="bank-block-title">FOR 4% DLD AND ADMIN FEE</div>
                     
                     <div class="b-label">Bank</div>
